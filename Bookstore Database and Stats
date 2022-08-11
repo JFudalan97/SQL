@@ -1,0 +1,28 @@
+-- Created a Bookstore database 
+
+CREATE TABLE Bookstore (id INTEGER PRIMARY KEY, name TEXT, release_year TEXT, author TEXT, price NUMERIC);
+
+INSERT INTO Bookstore VALUES (001, "In Search of Lost Time", "1913", "Marcel Proust", 9.99);
+INSERT INTO Bookstore VALUES (002, "Ulysses", "1904", "James Joyce", 5.99);
+INSERT INTO Bookstore VALUES (003, "Moby Dick", "1851", "Herman Melville", 99.99);
+INSERT INTO Bookstore VALUES (004, "Hamlet", "1599", "William Shakespear", 13.99);
+INSERT INTO Bookstore VALUES (005, "Wuthering Heights", "1801", "Emily Bronte", 12.99);
+INSERT INTO Bookstore VALUES (006, "The Catcher in the Rye", "1945", "J.D. Salinger", 20.99);
+INSERT INTO Bookstore VALUES (007, "ALice's Adventures in Wonderland", "1862", "Lewis Carroll", 14.99);
+INSERT INTO Bookstore VALUES (008, "To the Lighthouse", "1910", "Virginia Wolf", 17.99);
+INSERT INTO Bookstore VALUES (009, "Catch 22", "1961", "Joseph Heller", 8.99);
+INSERT INTO Bookstore VALUES (010, "Absalom Absalom!", "1936", "William Faulkner", 21.99);
+INSERT INTO Bookstore VALUES (011, "The Trial", "1914", "Franz Kafka", 14.99);
+INSERT INTO Bookstore VALUES (012, "Middlemarch", "1869", "George Eliot", 4.99);
+INSERT INTO Bookstore VALUES (013, "Beloved", "1987", "Toni Morrison", 11.99);
+INSERT INTO Bookstore VALUES (014, "Collected Fiction", "1935", "Jorge Luis Borges", 23.99);
+INSERT INTO Bookstore VALUES (015, "Leaves of Grass", "1855", "Walt Whitman", 7.99);
+
+-- Displayed the enntire database 
+SELECT * FROM Bookstore;
+
+-- Displayed the entire database by ascending price 
+SELECT * FROM Bookstore ORDER BY price asc;
+
+-- What is the average price of all the books that came out after 1851
+SELECT AVG(price) FROM Bookstore WHERE release_year > 1851;
